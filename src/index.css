@@ -5,6 +5,10 @@
 body {
     margin: 0;
     font-family: Inter, sans-serif;
+    background-color: #FAFAF8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
@@ -14,6 +18,8 @@ header {
   align-items: center;
   gap: 0.75em;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  width: 100vw;
 }
 
 .img-chef-claude {
@@ -22,4 +28,42 @@ header {
 
 .title {
   font-size: 2rem;
+}
+
+main {
+  padding: 4em 1em 1em;
+}
+
+.add-ingredient-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.field-add-ingredient,
+.btn-add-ingredient {
+  border-radius: 6px;
+}
+
+.field-add-ingredient {
+  border: 1px solid #D1D5DB;
+  padding: 1em 0.75em;
+  width: 80vw;
+  min-width: 150px;
+  max-width: 400px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.btn-add-ingredient {
+  border: none;
+  background-color: #141413;
+  color: #FAFAF8;
+  padding: 1em 2em;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.btn-add-ingredient:hover {
+  background-color: #74175a;
 }
