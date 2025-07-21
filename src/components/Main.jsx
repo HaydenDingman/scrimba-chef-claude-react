@@ -19,9 +19,18 @@ function Main() {
                 <input type="text" aria-label="Add ingredient" placeholder="e.g. oregano" className="field-add-ingredient" name="ingredient" />
                 <button className="btn-add-ingredient">+ Add Ingredient</button>
             </form>
-            <ul>
-                {ingredientsListItems}
-            </ul>
+            {ingredients.length > 0 ? 
+            <section className="width-container">
+                <h2>Ingredients on hand:</h2>
+                <ul className="ingredients-list" aria-live="polite">{ingredientsListItems}</ul>
+                <div className="get-recipe-container">
+                    <div>
+                        <h3>Ready for a recipe?</h3>
+                        <p>Generate a recipe from your list of ingredients.</p>
+                    </div>
+                    <button>Get a recipe</button>
+                </div>
+            </section> : null}
         </main>
     )
 }
