@@ -8,14 +8,14 @@ function Main() {
         <li key={ingredient}>{ingredient}</li>
     ))
 
-    function handleSubmit(formData) {
+    function addIngredient(formData) {
         const newIngredient = formData.get("ingredient");
         setIngredients(prevIngredients => [...prevIngredients, newIngredient])
     }
 
     return(
         <main>
-            <form className="add-ingredient-form" action={handleSubmit}>
+            <form className="add-ingredient-form" action={addIngredient}>
                 <input type="text" aria-label="Add ingredient" placeholder="e.g. oregano" className="field-add-ingredient" name="ingredient" />
                 <button className="btn-add-ingredient">+ Add Ingredient</button>
             </form>
