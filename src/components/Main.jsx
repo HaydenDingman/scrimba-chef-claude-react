@@ -4,11 +4,9 @@ import IngredientsList from "./IngredientsList";
 
 function Main() {
 
+    const apikey = process.env.HF_ACCESS_TOKEN;
+
     const [ingredients, setIngredients] = useState(["radish", "onion", "oregano", "plum"])
-    
-    const ingredientsListItems = ingredients.map(ingredient => (
-        <li key={ingredient}>{ingredient}</li>
-    ))
 
     const [recipeShown, setRecipeShown] = useState(false);
 
